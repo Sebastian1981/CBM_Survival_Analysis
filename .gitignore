@@ -162,3 +162,4 @@ cython_debug/
 
 # dont sync __pycache__ folder
 /__pycache__
+.pyc
