@@ -5,7 +5,6 @@ class ChurnDataset:
     def __init__(self):
         self.file_name = 'data/telco_customer_churn.csv'
         self.churn_df = None
-        self.churn_df_hotenc = None
         self.duration = ['tenure']
         self.event = ['Churn']
         self.cat_features = [
@@ -53,7 +52,7 @@ class ChurnDataset:
             self.churn_df, 
             pd.get_dummies(self.churn_df[self.cat_features + self.event], 
                            drop_first=True)], 
-                   axis=1).drop(self.cat_features + self.event, axis=1)    
+                   axis=1).drop(self.cat_features + self.event, axis=1)
     
     def get_data(self):
         return self.churn_df
