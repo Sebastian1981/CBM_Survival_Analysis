@@ -80,6 +80,6 @@ class ChurnData:
         # get uncensored data
         self.get_uncensored_data()
         # train test split uncensored data
-        self.churn_df_uncensored_train, self.churn_df_uncensored_test = train_test_split(self.churn_df,
+        self.churn_df_uncensored_train, self.churn_df_uncensored_test = train_test_split(self.churn_df_uncensored,
                                                                                          test_size=self.test_size,
                                                                                          random_state=self.seed)
