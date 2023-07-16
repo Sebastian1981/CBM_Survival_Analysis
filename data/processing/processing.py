@@ -51,7 +51,8 @@ class ChurnDataset:
         self.churn_df = pd.concat([
             self.churn_df, 
             pd.get_dummies(self.churn_df[self.cat_features + self.event], 
-                           drop_first=True)], 
+                           drop_first=True,
+                           dtype='int')],
                    axis=1).drop(self.cat_features + self.event, axis=1)
     
     def get_data(self):
